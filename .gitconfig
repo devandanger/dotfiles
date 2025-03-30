@@ -1,0 +1,22 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+name = Evan Anger
+email = devandanger@gmail.com
+[alias]
+    cm = !git add -A && git commit -m
+    graph = log --oneline --graph --decorate
+    s = status
+    co = checkout
+    cob = checkout -b
+    del = branch -D
+    undo = reset HEAD~1 --mixed
+    done = !git push origin HEAD
+    cm = !git add . && git commit -m
+
+
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
